@@ -1,0 +1,60 @@
+Załadowanie plików do PBI:
+
+1. Proszę o ściągnięcie i załadowanie plików csv do pliku PBI
+	- Albo używając pobierz dane -> folder i odwołując się do pierwszego zapytania
+		- Wyłączenie ładowania źródła dla tabeli z odniesieniem o olderu
+	- Albo wgrywając pliki indywidualnie pobierz dane -> plik tekstowy lub csv
+2. Dodanie kalendarza z pliku tekstowego
+	- oraz ustawienie tabeli jako kalendarz bazujący na kolumnie Date
+3. Dodanie pustej tabeli na nasze miary:  0_measures
+4. Utworzenie odpowiednich relacji w modelu
+5. Sprawdzenie czy nasze relacje z kalendarzem działają
+	- pusta strona tabela rok z kalendarza oraz miara jawna/ nie jawna sumująca np. Revenue
+
+
+W ramach zaliczenia najważniejsze jest utworzenie raportu, który opowie nam o sytuacji poszczególnych sklepów oraz całej sieci
+
+
+Przykładowe rozwiązanie:
+- Landing Page do wyboru
+	- Mapa
+	- Prosta strona informacyjna z KPI oraz wykresami
+- Strona ogólna sprzedaży
+	- Informacje o sprzedaży całej sieci sklepów
+	- Analiza sprzedaży / zysków / grup produktowych
+	- analiza segmentów / brandów 
+- Analiza szczegółowa np. jednego sklepu lub grupy produktów
+	- sprzedaż pracowników danego sklepu
+	- analiza asortymentu w sklepie  np. najczęściej kupowane, zwracane
+- Analiza poszczególnych sprzedaży w sieci (detale)
+	- zagregowane dane w hierarchii rok=> miesiąc => tydzień => dzień
+	- drill through po dniu do indywidualnych transakcji
+
+Dodatkowe informacje:
+	- projektujcie główne strony dla wymiarów płótna 1080 na 1920 wys/szer
+	- dodać tytuł raportu na pierwszej stronie, oraz tytuły poszczególnych stron (jeżeli będzie to spójne z Waszą koncepcją na raport)
+	- Używajcie miar jawnych tzn. Sum(Kolumna) a nie przeciągając dane z tabeli i podstawowych agregatów
+		- W ramach tworzonych miar zastosujcie SUMX aby poznać koszt danego zamówienia oraz następnie dochód (revenue - koszt) sieci
+	- Revenue jest już pomniejszone o wartość zniżki, możemy również wyliczyć jej wartość używając miary SUMX 
+	- Zbiór danych posiada dzienne target, skupcie się na tych odnoszących się do przychodów
+		- ewentualnie ilościowych po zastosowaniu naszej poprawki dostępnej na Slacku
+	- Transakcje mają statusy, nanieście je na filtr boczny i w ramach podstawowej analizy patrzmy tylko na te które nie zostały zwrócone
+	- Używajcie miar Time intelligence (np. sameperiodlastyear, parallelperiod) oraz odnoście się do całości aby zachować kontekst przy tworzeniu waszych stron 
+		- np. % sprzedaży dane sklepu w stosunku do całej sieci/brandu, Y/Y | M/M | T/T ilość sprzedaży,
+	- Przemyślcie co na powinno znaleźć się na filtrach, co jest odpowiednie dla danej strony?
+		- Gdzie dane filtry umiejscowić?
+	- Zadbajcie o to aby formatowania warunkowe, i kolorystyka raportów była spójna
+	- Estetyka jest względna ale zachęcam do nie używania krzykliwych kolorów :)
+	- Wykorzystajcie tooltipy np. dla mapy lub wykresów 
+
+Spróbujcie:
+	- Posiadać plan na historię i flow raportu zanim przystąpicie do pracy
+		- Oraz przygotujcie się do tego jak te dane będziecie prezentować na zajęciach
+	- Wykorzystać Field Parameters (Nowy parametr) oraz / lub Calculation Group (grupę obliczeniowa)
+	- Napisać miarę rank X i użyć jej w wizualizacji lub jako filtr wewnątrz wizualizacji np. top 5 produktów
+	- stworzyć łączoną wizualizacje z wykresu liniowego oraz nowej karty
+		- Bez tła, użyte miary takie same na wykresie i w karcie + np. procent realizacji jako wartość tłumaczona ze strzałką góra / dół 
+	- ustawić nie aktywną relacje do daty wycofań i pokazać jednocześnie sprzedaże i wycofania z danego dnia
+	- użyć figmy, lub innego narzędzia do zaplanowania warstwy wizualnej raportu
+	- wykorzystać zakładki, pogrupować i nazywać wykorzystywane na stronie elementy
+	- zastosować Switch() przy formatowaniu warunkowym

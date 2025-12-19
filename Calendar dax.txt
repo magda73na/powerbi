@@ -1,0 +1,23 @@
+Calendar = 
+VAR MinDate =
+    CALCULATE ( MIN ( F_Sales[Date] ), ALL ( F_Sales ) )
+VAR MaxSalesDate =
+    CALCULATE ( MAX ( F_Sales[Date] ), ALL ( F_Sales ) )
+
+VAR StartOfYearDate = 
+    DATE ( YEAR(MinDate)-1, 1, 1 )
+VAR EndOfYearDate =
+    DATE ( YEAR(MaxSalesDate), 12, 31 )
+RETURN
+    ADDCOLUMNS (
+        CALENDAR ( StartOfYearDate, EndOfYearDate),
+        "Year", YEAR ( [Date] ),
+        "Month Number", MONTH ( [Date] ),
+        "Month", FORMAT ( [Date], "MMMM" ),
+        "Year-Month", INT(FORMAT ( [Date], "YYYYMM" )),
+        "Year-Month-Name", FORMAT ( [Date], "MM-YYYY" ),
+        "Quarter", "Q" & FORMAT ( [Date], "Q" ),
+        "Week Number", WEEKNUM ( [Date] ),
+        "Day", DAY ( [Date] ),
+        "Day Name", FORMAT ( [Date], "dddd" )
+    )

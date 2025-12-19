@@ -1,0 +1,50 @@
+Selected Filters = 
+VAR SelStatus =
+    VAR IsFilteredStatus = ISFILTERED(D_Status[StatusName])
+    VAR CountStatus = COUNTROWS(VALUES(D_Status[StatusName]))
+    RETURN
+        SWITCH(
+            TRUE(),
+            NOT IsFilteredStatus, "All selected",
+            CountStatus > 3, "Above 3",
+            CONCATENATEX(VALUES(D_Status[StatusName]), D_Status[StatusName], ", ")
+        )
+
+VAR SelBrand =
+    VAR IsFilteredBrand = ISFILTERED(D_Stores[BrandName])
+    VAR CountBrand = COUNTROWS(VALUES(D_Stores[BrandName]))
+    RETURN
+        SWITCH(
+            TRUE(),
+            NOT IsFilteredBrand, "All selected",
+            CountBrand > 3, "Above 3",
+            CONCATENATEX(VALUES(D_Stores[BrandName]), D_Stores[BrandName], ", ")
+        )
+
+VAR SelStore =
+    VAR IsFilteredStore = ISFILTERED(D_Stores[StoreName])
+    VAR CountStore = COUNTROWS(VALUES(D_Stores[StoreName]))
+    RETURN
+        SWITCH(
+            TRUE(),
+            NOT IsFilteredStore, "All selected",
+            CountStore > 3, "Above 3",
+            CONCATENATEX(VALUES(D_Stores[StoreName]), D_Stores[StoreName], ", ")
+        )
+
+VAR SelCategory =
+    VAR IsFilteredCategory = ISFILTERED(D_Product[Category])
+    VAR CountCat = COUNTROWS(VALUES(D_Product[Category]))
+    RETURN
+        SWITCH(
+            TRUE(),
+            NOT IsFilteredCategory, "All selected",
+            CountCat > 3, "Above 3",
+            CONCATENATEX(VALUES(D_Product[Category]), D_Product[Category], ", ")
+        )
+
+RETURN
+"Wybrane Filtry // " & "Status: " & SelStatus
+& " | Brand: " & SelBrand
+& " | Store: " & SelStore
+& " | Category: " & SelCategory
