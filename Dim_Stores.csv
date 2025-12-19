@@ -1,0 +1,26 @@
+StoreID,StoreName,BrandName,BrandCategory,City,Voivodeship,Population,ZipCode
+1,Store 1,Lumina Couture,Premium,Kraków,Małopolskie,780000,30-062
+2,Store 2,Urban Thread,Casual,Szczecin,Zachodniopomorskie,400000,70-455
+3,Store 3,Nordic Motion,Sportswear,Gdańsk,Pomorskie,490000,80-254
+4,Store 4,Sapphire Atelier,Premium,Warszawa,Mazowieckie,1790000,03-148
+5,Store 5,StreetLoom,Casual,Toruń,Kujawsko-pomorskie,200000,87-104
+6,Store 6,FlexTrail,Sportswear,Toruń,Kujawsko-pomorskie,200000,87-123
+7,Store 7,Imperial Stitch,Premium,Wrocław,Dolnośląskie,640000,53-421
+8,Store 8,DailyWeave,Casual,Poznań,Wielkopolskie,540000,60-782
+9,Store 9,PeakRunner,Sportswear,Warszawa,Mazowieckie,1790000,03-142
+10,Store 10,AzureWear,Premium,Gdańsk,Pomorskie,490000,80-362
+11,Store 11,MetroEase,Casual,Wrocław,Dolnośląskie,640000,53-201
+12,Store 12,StrideForge,Sportswear,Szczecin,Zachodniopomorskie,400000,71-011
+13,Store 13,Royal Loom,Premium,Gliwice,Śląskie,177000,44-156
+14,Store 14,SoftEdge Apparel,Casual,Lublin,Lubelskie,340000,20-137
+15,Store 15,SwiftFlex,Sportswear,Lublin,Lubelskie,340000,20-542
+16,Store 16,VelvetCraft,Premium,Lublin,Lubelskie,340000,20-309
+17,Store 17,UrbanEase,Casual,Łódź,Łódzkie,660000, 90-001
+18,Store 18,RushSport,Sportswear,Warszawa,Mazowieckie,1790000,01-821
+19,Store 19,Golden Stitch,Premium,Tarnów,Małopolskie,105000,33-111
+20,Store 20,CityLayer,Casual,Łódź,Łódzkie,660000,93-204
+21,Store 21,TrailBound,Sportswear,Bydgoszcz,Kujawsko-pomorskie,340000,85-758
+22,Store 22,Elegance Forge,Premium,Łódź,Łódzkie,660000,90-007
+23,Store 23,DailyThread,Casual,Kraków,Małopolskie,780000,31-512
+24,Store 24,CoastRunner,Sportswear,Gdynia,Pomorskie,245000,81-364
+25,Store 25,Majestic Apparel,Premium,Wrocław,Dolnośląskie,640000,54-212

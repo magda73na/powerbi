@@ -1,0 +1,16 @@
+ProductID,ProductName,Category,Price,Cost
+1,T-shirt basic,Topy,261.64,69.66
+2,T-shirt premium,Topy,108.68,25.12
+3,Bluza z kapturem,Bluzy,71.77,18.09
+4,Bluza oversize,Bluzy,381.11,97.06
+5,Sweter wełniany,Swetry,386.97,84.55
+6,Kurtka zimowa,Kurtki,331.94,98.57
+7,Kurtka przejściowa,Kurtki,155.61,43.18
+8,Płaszcz wełniany,Kurtki,83.19,24.45
+9,Spodnie jeansowe,Spodnie,288.48,83.51
+10,Spodnie materiałowe,Spodnie,203.05,52.75
+11,Szorty,Spodenki,91.71,26.8
+12,Sukienka letnia,Sukienki,222.31,46.43
+13,Sukienka wieczorowa,Sukienki,61.04,13.4
+14,Koszula męska,Koszule,367.26,75.11
+15,Koszula damska,Koszule,139.57,32.45
